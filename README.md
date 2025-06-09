@@ -1,5 +1,7 @@
 # RoomBook
 
+[Live Demo](https://roombook.wasmer.app/)
+
 ![Изображение частей сайта.](/preview.jpg)
 
 Тестовая тема сервиса бронирования переговорных комнат.
