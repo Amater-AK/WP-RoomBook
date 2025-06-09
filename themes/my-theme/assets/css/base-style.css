@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+    --wrapper-width: 75rem;
+    --wrapper-offset-x: 1rem;
+}
+
+@layer base {
+    html {
+        /* font-size: 62.5%; */
+        @apply bg-primary-bg text-primary-text;
+    }
+
+    h1 {
+        @apply text-3xl md:text-4xl font-semibold text-pretty;
+    }
+}
+
+@theme {
+    --color-primary-text: #0f0f0d;
+    --color-primary-bg: #edeced;
+    --color-primary-btn-500: #0063fc;
+    --color-primary-btn-700: #004cbf;
+    --color-primary-btn-900: #003d99;
+    --color-border-500: #eceded;
+    --color-border-600: #bebdbb;
+    --color-primary-accents: #0063fc;
+    --color-error: #f98a89;
+    --color-success: #7cbc77;
+}
+
+@utility content-wrapper {
+    inline-size: min(var(--wrapper-width, 0), 100% - 2 * var(--wrapper-offset-x, 0));
+    margin-inline: auto;
+}
+
+@layer components {
+    .button {
+        @apply inline-block px-4 py-2 text-center whitespace-nowrap text-white bg-primary-btn-500 hover:bg-primary-btn-700 active:bg-primary-btn-700 rounded-lg duration-300;
+    }
+
+    .button-invert {
+        @apply inline-block px-4 py-2 text-center whitespace-nowrap text-primary-btn-500 bg-primary-btn-500/40 hover:bg-primary-btn-500/20 active:bg-primary-btn-500/20 rounded-lg duration-300;
+    }
+
+    .input-block {
+        @apply grid gap-1;
+    }
+
+    .input {
+        @apply bg-white px-3 py-2 rounded-md;
+    }
+}
